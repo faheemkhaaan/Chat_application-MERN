@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "src/main.ts",
   "scripts": {
+    "install:all": "npm ci && cd frontend && npm ci",
     "build": "tsc && cd frontend && npm run build",
     "dev": "nodemon src/main.ts",
-    "start": "node dist/main.js"
+    "start": "node dist/main.js",
+    "postinstall": "cd frontend && npm ci"
   },
   "author": "",
   "license": "ISC",

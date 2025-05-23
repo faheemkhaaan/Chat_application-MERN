@@ -1,0 +1,128 @@
+.userprofilecontainer {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.profileheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.closebutton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.profilecontent {
+    padding: 20px;
+}
+
+.avatarsection {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.profileavatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.statusindicator {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.status-indicator[data-status="online"] {
+    background-color: #4CAF50;
+}
+
+.status-indicator[data-status="offline"] {
+    background-color: #9E9E9E;
+}
+
+.status-indicator[data-status="away"] {
+    background-color: #FFC107;
+}
+
+.status-indicator[data-status="busy"] {
+    background-color: #F44336;
+}
+
+.profiledetails {
+    text-align: center;
+}
+
+.profile-details h3 {
+    margin: 0 0 5px;
+    font-size: 1.5rem;
+}
+
+.email {
+    color: #666;
+    margin: 0 0 15px;
+}
+
+.bio {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.detail-value {
+    color: #333;
+}
+
+.profile-actions {
+    margin-top: 20px;
+}
+
+.edit-profile-button {
+    background: #4285f4;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.edit-profile-button:hover {
+    background: #3367d6;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}

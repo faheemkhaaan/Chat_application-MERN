@@ -1,0 +1,49 @@
+.glow_button {
+    position: relative;
+    padding: 10px 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+/* Glowing border effect */
+.glow_button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    /* Border width */
+    background: var(--base-color);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: var(--glow-opacity);
+    transform: scale(var(--glow-scale));
+    transition: all 0.3s ease;
+}
+
+/* Moving light spot */
+/* .glow_button::after {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle closest-side,
+            var(--base-color),
+            transparent);
+    transform: translate(-50%, -50%);
+    opacity: var(--glow-opacity);
+    pointer-events: none;
+    z-index: -1;
+    transition: all 0.3s ease;
+} */

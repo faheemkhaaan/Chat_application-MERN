@@ -1,0 +1,102 @@
+.showSidebar {
+    width: 300px;
+    height: 100%;
+    z-index: 200;
+    left: -300px;
+    animation: showSideBar 0.3s ease-in-out 1 forwards;
+}
+
+@keyframes showSideBar {
+    100% {
+        left: 0;
+        display: block;
+    }
+}
+
+.hideSidebar {
+    width: 300px;
+    height: 100%;
+
+    z-index: 50;
+    left: 0;
+    animation: hideSideBar 0.3s ease-in-out 1 forwards;
+}
+
+@keyframes hideSideBar {
+    100% {
+        left: -300px;
+        display: none;
+
+    }
+}
+
+.userInfo {
+    width: 500px;
+    height: 500px;
+    /* opacity: 0; */
+    display: none;
+    transform-origin: bottom right;
+    overflow: hidden;
+}
+
+/* Show user info smoothly */
+.showUserInfo {
+    display: block;
+    z-index: 40;
+    transform: scale(0, 0);
+    animation: show 0.8s ease-in-out forwards;
+}
+
+@keyframes show {
+    0% {
+        transform: scale(0, 0.1);
+    }
+
+    50% {
+        transform: scale(1, 0.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+/* Hide user info smoothly */
+.hideUserInfo {
+    display: block;
+    z-index: 40;
+    animation: hide 0.8s ease-in-out forwards;
+    pointer-events: none;
+
+}
+
+@keyframes hide {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1, 0.1);
+    }
+
+    80% {
+        transform: scale(0, 0.1);
+    }
+
+    100% {
+        transform: scale(0, 0);
+        display: none;
+    }
+}
+
+
+
+@media (min-width: 765px) {
+
+    .showSidebar,
+    .hideSidebar {
+        display: block !important;
+        left: 0 !important;
+        animation: none !important;
+    }
+}

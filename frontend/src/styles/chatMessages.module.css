@@ -1,0 +1,27 @@
+.incomming_message {
+    scale: 0;
+    border-radius: 50%;
+    transform-origin: bottom left;
+    animation: show_message 0.3s ease-in-out forwards;
+}
+
+@keyframes show_message {
+    100% {
+        border-radius: 0%;
+        scale: 1;
+    }
+}
+
+.outgoing_message {
+    scale: 0;
+    border-radius: 50%;
+    transform-origin: bottom right;
+    animation: outgoingMsg 0.3s ease-in-out forwards;
+}
+
+@keyframes outgoingMsg {
+    100% {
+        border-radius: 0%;
+        scale: 1;
+    }
+}
